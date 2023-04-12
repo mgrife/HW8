@@ -25,8 +25,6 @@ def load_rest_data(db):
         first_dict[name] = {'category':category, 'building' : building, 'rating': rating}
     
     return first_dict
-
-
     """
     This function accepts the file name of a database as a parameter and returns a nested
     dictionary. Each outer key of the dictionary is the name of each restaurant in the database, 
@@ -106,6 +104,9 @@ def get_highest_rating(db): #Do this through DB as well
 
 #Try calling your functions here
 def main():
+    # load_rest_data("South_U_Restaurants.db")
+    # plot_rest_categories("South_U_Restaurants.db")
+    # find_rest_in_building(1140, "South_U_Restaurants.db")
     pass
 
 class TestHW8(unittest.TestCase):
