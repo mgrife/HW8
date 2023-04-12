@@ -17,6 +17,8 @@ def load_rest_data(db):
     #cur.execute('Select name From restaurants  join categories on restaurants.category_id = categories.id join buildings on restaurants.building_id = buildings.id')
     rows = cur.fetchall()
 
+
+
     for row in rows:
         name = row[0]
         category = row[1]
@@ -25,12 +27,7 @@ def load_rest_data(db):
         first_dict[name] = {'category':category, 'building' : building, 'rating': rating}
     
     return first_dict
-    """
-    This function accepts the file name of a database as a parameter and returns a nested
-    dictionary. Each outer key of the dictionary is the name of each restaurant in the database, 
-    and each inner key is a dictionary, where the key:value pairs should be the category, 
-    building, and rating for the restaurant.
-    """
+
 
 #load_rest_data("South_U_Restaurants.db")
 
@@ -104,10 +101,10 @@ def get_highest_rating(db): #Do this through DB as well
 
 #Try calling your functions here
 def main():
-    # load_rest_data("South_U_Restaurants.db")
-    # plot_rest_categories("South_U_Restaurants.db")
-    # find_rest_in_building(1140, "South_U_Restaurants.db")
-    pass
+    load_rest_data("South_U_Restaurants.db")
+    plot_rest_categories("South_U_Restaurants.db")
+    find_rest_in_building(1140, "South_U_Restaurants.db")
+    
 
 class TestHW8(unittest.TestCase):
     def setUp(self):
