@@ -104,7 +104,6 @@ def main():
     load_rest_data("South_U_Restaurants.db")
     plot_rest_categories("South_U_Restaurants.db")
     find_rest_in_building(1140, "South_U_Restaurants.db")
-    
 
 class TestHW8(unittest.TestCase):
     def setUp(self):
